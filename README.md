@@ -17,7 +17,7 @@ pip install bezier_interpolation
 
 ### Cubic segments:
 Let's say we have this 3 green points $P_{0,0}$, $P_{3,0} = P_{0,1}$ and $P_{3,1}$ and we want to have a smooth curve between them.   
-![alt text](image-1.png)
+![Cubic Bezier Interpolation](https://github.com/balexandermunoz/bezier-interpolation/blob/master/image-1.png?raw=true)
 
 We need to find where to set the control points $P_{1,0}$, $P_{2,0}$, $P_{1,1}$ and $P_{2,1}$.   
 
