@@ -139,6 +139,8 @@ $$P_{2, i} = 2K_i + P_{1,i}$$
 and 
 $$P_{2, n-1} = (1/2)(K_n + P_{1,n-1})$$
 
+### Quadratic segments:
+ TODO
 
 ### References:
 - [Smooth Bezier Spiline Through Prescribed Points](https://www.particleincell.com/2012/bezier-splines/)   
