@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="bezier-interpolation",
-    version="0.0.0",
+    version="0.0.1",
     author="Brayan Munoz",
     author_email="balexander.munoz@udea.edu.co",
     description="A Python library for generating smooth curves between given points using cubic and quadratic Bezier interpolation.",
