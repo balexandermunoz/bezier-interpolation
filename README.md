@@ -108,3 +108,39 @@ $$
 0 & 0 & \cdots & 0 & 2 & 7
 \end{bmatrix}
 $$
+
+x is this vector:
+$$
+\begin{bmatrix}
+P_{1,1}  \\
+P_{1,2}  \\
+P_{1,3}  \\
+\vdots  \\
+P_{1,n-2}  \\
+P_{1, n-1} 
+\end{bmatrix}
+$$
+
+and b this one: 
+$$
+\begin{bmatrix}
+K_{0} + 2K_1  \\
+4K_0 + 2K_1  \\
+4K_1 + 2K_2  \\
+\vdots  \\
+4K_{n-2} + 2K_{n-1}  \\
+8K_{n-1} + K_{n} 
+\end{bmatrix}
+$$
+
+and if we solve this system, we can get $P_{2}$ with:
+
+$$P_{2, i} = 2K_i + P_{1,i}$$
+and 
+$$P_{2, n-1} = (1/2)(K_n + P_{1,n-1})$$
+
+
+### References:
+- [Smooth Bezier Spiline Through Prescribed Points](https://www.particleincell.com/2012/bezier-splines/)   
+
+- [Drawing Smooth Cubic Bezier Curve through prescribed points](https://exploringswift.com/blog/Drawing-Smooth-Cubic-Bezier-Curve-through-prescribed-points-using-Swift)
