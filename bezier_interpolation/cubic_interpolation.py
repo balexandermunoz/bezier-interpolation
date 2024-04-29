@@ -18,7 +18,7 @@ def cubic_interpolation(data: npt.ArrayLike) -> np.ndarray:
     data = np.array(data)
     n = len(data)
     if n < 2:
-        return np.array(data)
+        return data
 
     new_data = []
     if n == 2:
