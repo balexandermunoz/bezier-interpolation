@@ -29,7 +29,7 @@ def cubic_interpolation(data: npt.ArrayLike) -> np.ndarray:
         new_data.append((x1 + (x2 - x1) / 3, y1 + (y2 - y1) / 3))
         new_data.append((x1 + 2 * (x2 - x1) / 3, y1 + 2 * (y2 - y1) / 3))
         new_data.append((x2, y2))
-    
+
     else:
         P1, P2 = _calculate_control_points(data)
         for i in range(n - 1):
