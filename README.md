@@ -112,12 +112,12 @@ $$
 x is this vector:
 $$
 \begin{bmatrix}
-P_{1,1}  \\
-P_{1,2}  \\
-P_{1,3}  \\
-\vdots  \\
-P_{1,n-2}  \\
-P_{1, n-1} 
+P_{1,1} \\
+P_{1,2} \\
+P_{1,3} \\
+\vdots \\
+P_{1,n-2} \\
+P_{1, n-1}
 \end{bmatrix}
 $$
 
