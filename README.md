@@ -166,7 +166,8 @@ $$b_i = Y_{i, 0} - m_i X_{i, 0} $$
 
 and 
 
-$$X_{i,1} = X_{i,0} + \frac{1}{2}(x_{i,2} - X_{i,0})$$
+$$X_{i,1} = X_{i,0} + \frac{1}{2}(x_{i,2} - X_{i,0})$$   
+
 $$Y_{i,1} = m_i  X_{i,1} + b_i$$
 
 wich are the X,Y components of the desired $P_{i,1}$  point respectively. 
