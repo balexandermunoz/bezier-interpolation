@@ -139,9 +139,36 @@ $$P_{2, i} = 2K_i + P_{1,i}$$
 and 
 $$P_{2, n-1} = (1/2)(K_n + P_{1,n-1})$$
 
-### Quadratic segments:
- TODO
+### Quadratic segments. Geometrical approach:
+We could follow a process similar to the one we did above, but this one would be straightforward and it will have no dependency with t. We want to control the start angle, so let's try a geomterical approach.    
+Let's suppose we now want just one control point between two data points, so we have something like this 
+![Quadratic Bezier Interpolation](https://github.com/balexandermunoz/bezier-interpolation/blob/master/bezier-interpolation2.png?raw=true)
+Did you notice that now we need points $P_{1,0}$ and $P_{1,1}$ in the same line?   
+In general, we need $P_{1, i}$ align for $i \in 0,1,...,n-1$ when $n$ = number of data points, and $n-1$ is the number of segments.   
 
+We are going to set the first control point in the middle of $P_{0,0}$ and $P_{0,2}$, so, we can say for the midpoint formula:
+
+$$ P_{0,1} = P_{0,0} + \frac{1}{2}(P_{0, 2} - P_{0,0}) $$
+
+If we want to add the control parameter $t$, we can control the distance and relative altitude respect the last point, so we write
+
+$$ P_{0,1} = P_{0,0} + t (P_{0, 2} - P_{0,0}) $$
+
+Now that we have the first control point, we need to compute the line between $P_{0,1}$ and $P_{0,2}$ and set the next control point in that line.  
+
+We call the line between $P_{i,1}$ and $P_{i,2}$ $L_{i}$ which is defined by the equation $Y_i = m_i  X_{i-1} + b_i$. &Y_i& is the $Y$ component of $P_{i,1}$ and  $X_{i-1}$ is the $X$ component of $P_{i-1,1}$.   
+
+So, in general, for the next $n-2$ points we can write:
+$$m_i = \frac{Y_{i, 0} - Y_{i-1, 1}}{X_{i, 0} - X_{i-1, 1}}$$
+
+$$b_i = Y_{i, 0} - m_i X_{i, 0} $$
+
+and 
+
+$$X_{i,1} = X_{i,0} + \frac{1}{2}(x_{i,2} - X_{i,0})$$
+$$Y_{i,1} = m_i  X_{i,1} + b_i$$
+
+wich are the X,Y components of the desired $P_{i,1}$  point respectively. 
 ### References:
 - [Smooth Bezier Spiline Through Prescribed Points](https://www.particleincell.com/2012/bezier-splines/)   
 
