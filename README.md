@@ -156,7 +156,8 @@ $$ P_{0,1} = P_{0,0} + t (P_{0, 2} - P_{0,0}) $$
 
 Now that we have the first control point, we need to compute the line between $P_{0,1}$ and $P_{0,2}$ and set the next control point in that line.  
 
-We call the line between $P_{i,1}$ and $P_{i,2}$ $L_{i}$ which is defined by the equation $Y_i = m_i  X_{i-1} + b_i$. &Y_i& is the $Y$ component of $P_{i,1}$ and  $X_{i-1}$ is the $X$ component of $P_{i-1,1}$.   
+We call the line between $P_{i,1}$ and $P_{i,2}$ $L_{i}$ which is defined by the equation $Y_i = m_i  X_{i-1} + b_i$.    
+$Y_i$ is the $Y$ component of $P_{i,1}$ and  $X_{i-1}$ is the $X$ component of $P_{i-1,1}$.   
 
 So, in general, for the next $n-2$ points we can write:
 $$m_i = \frac{Y_{i, 0} - Y_{i-1, 1}}{X_{i, 0} - X_{i-1, 1}}$$
