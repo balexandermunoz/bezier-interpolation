@@ -65,19 +65,15 @@ B'(t) = 3(1 - t)^2 \cdot (P_1 - P_0) + 6(1 - t)t \cdot (P_2 - P_1) + 3t^2 \cdot 
 \end{align}
 $$
 
-By definition, if we replace $t = 0$ in $B(t)$ we get $B(0) = P_0$ and $B(1) = P_3$, so, to meet our condition we can write   
-$$
-B'_i(0) = B'_{i-1}(1)
-$$    
+By definition, if we replace $t = 0$ in $B(t)$ we get $B(0) = P_0$ and $B(1) = P_3$, so, to meet our condition we can write
+$$B^\prime_i(0) = B^\prime_{i-1}(1)$$    
 
 If we replace the values in the equation, we get: 
 
 $$-3P_{0,i} + 3P_{1, i} = -3 P_{2,i-1} + 3 P_{3, i-1}$$   
 
 And using the eq (1):
-$$
-2K_i = P_{1,i} + P_{2, i-1}
-$$   
+$$2K_i = P_{1,i} + P_{2, i-1}$$   
 
 We will now move to the second derivative. The second derivative tells us about the continuity of the curve. The second derivative of the bezier curve is:
 
@@ -88,11 +84,8 @@ B''(t) = 6(1 - t) \cdot (P_2 - 2P_1 + P_0) + 6t \cdot (P_3 - 2P_2 + P_1)
 $$
 
 The second derivative talks about the continuity and concavity of the plot.   
-So, we can write:       
-
-$$
-B''_i(0) = B''_{i-1}(1)
-$$
+So, we can write: 
+$$B''\_{i}(0) = B''\_{i-1}(1)$$
 
 If we substitute again we get:   
 
@@ -103,7 +96,7 @@ $$
 Those equations only apply in the internal knots, when the segments come together. So, let's get the equations for the boundaries, this is, $i = 0$ and $i = n - 1$:
 
 $$
-B''_i(0) = 6P_{0,0} - 12 P_{1,0} + 6P_{2,0}
+B''\_i(0) = 6P_{0,0} - 12 P_{1,0} + 6P_{2,0}
 $$
 
 $$
@@ -134,6 +127,7 @@ $$
 $$
 
 x is this vector:
+
 $$
 \begin{bmatrix}
 P_{1,1} \\
@@ -146,6 +140,7 @@ P_{1, n-1}
 $$
 
 and b this one: 
+
 $$
 \begin{bmatrix}
 K_{0} + 2K_1  \\
