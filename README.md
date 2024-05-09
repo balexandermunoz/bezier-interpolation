@@ -46,10 +46,8 @@ For that we need to set two conditions:
 2. To get a smooth curve we need to make sure the slope of the line connecting $P_{2,0}$ and $P_{3,0}$ is the same as $P_{3,0}$ and $P_{0,1}$.    
 
 
-We can write the first condition as    
-$$
-P_{0,i} = P_{3,i - 1} = K_i
-$$
+We can write the first condition as 
+$$P_{0,i} = P_{3,i - 1} = K_i$$
 
 For the second condition we are goint to use derivatives. The first derivative of any polynomial curve is the slope, so let's derivate the equation for a cubic Bezier curve:  
 
